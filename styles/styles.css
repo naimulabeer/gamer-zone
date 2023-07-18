@@ -250,6 +250,7 @@ main {
 .fv-img-content:hover .play-icon {
   display: block;
 }
+
 .fv-img-content:hover {
   opacity: 0.5;
 }
@@ -453,5 +454,20 @@ main {
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 20px;
+  }
+}
+
+/* tablet or medium devices */
+@media screen and (min-width: 576px) and (max-width: 960px) {
+  header {
+    padding: 50px;
+  }
+  nav,
+  .goat-container,
+  .gamer-container {
+    flex-direction: column;
+  }
+  .fv-img-container {
+    flex-direction: column;
   }
 }
