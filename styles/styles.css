@@ -290,6 +290,7 @@ main {
 
 .games-container {
   margin-top: 100px;
+  margin-left: 50px;
   display: flex;
   align-items: center;
 }
@@ -297,25 +298,81 @@ main {
 .card {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 1rem;
-  border-radius: 60px;
-  border: 0 solid;
-  background: #fff;
-  margin-left: 60px;
+  gap: 27px;
+  padding-right: 100px;
 }
 
 .card-container {
   display: flex;
-  text-align: center;
-}
-
-.card-container img {
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
   justify-content: flex-start;
+  align-items: center;
 }
 
 .card-container p {
-  margin-left: 10px;
+  margin-left: 16px;
+}
+
+.card-container:hover {
+  border: 1px solid #f948b2;
+  color: #f948b2;
+}
+
+/* footer section */
+.footer-container {
+  margin-top: 100px;
+  background-color: #0b0223;
+}
+
+.footer-content {
+  display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+.footer-content img {
+  margin-right: 10px;
+}
+
+.footer-section {
+  color: #ffffff;
+  display: flex;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.footer-icons {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.footer-icons img {
+  cursor: pointer;
+}
+
+.footer-terms {
+  margin-top: 20px;
+  display: flex;
+  color: rgba(255, 255, 255, 0.6);
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+.footer-terms p {
+  cursor: pointer;
+}
+.footer-end {
+  margin-top: 50px;
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  padding-bottom: 100px;
 }
 
 /* responsive for mobile screens */
@@ -328,6 +385,32 @@ main {
   .playinstant-container {
     flex-direction: column;
   }
+
+  .footer-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-section h5 {
+    font-size: 10px;
+  }
+
+  .footer-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 100px;
+  }
+  .footer-icons img {
+    width: 40%;
+  }
+
+  .games-container .card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .games-container {
+    margin: 0;
+    width: 200px;
+  }
+
   nav > ul {
     flex-direction: column;
   }
