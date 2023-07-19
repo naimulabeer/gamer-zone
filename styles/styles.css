@@ -124,6 +124,14 @@ main {
 .goat-content {
   padding-left: 100px;
   padding-right: 120px;
+  position: relative;
+}
+
+.group-goat img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .goat-title {
@@ -245,14 +253,33 @@ main {
   background-image: url("../icons/play2.svg");
   background-size: cover;
   display: none;
+  cursor: pointer;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-60%, -60%);
+  color: #ff42a5;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.fv-img-content:hover .text-overlay {
+  opacity: 1;
 }
 
 .fv-img-content:hover .play-icon {
   display: block;
 }
 
-.fv-img-content:hover {
+.fv-img-content:hover img {
   opacity: 0.5;
+  background-color: #000000;
 }
 
 .fv-img-content p {
@@ -334,6 +361,7 @@ main {
 }
 
 .footer-content {
+  margin-top: 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -400,6 +428,15 @@ main {
     margin: 0;
     width: 200px;
   }
+  .games-container img {
+    width: 30px;
+    height: 30px;
+  }
+  .card-container p {
+    margin-left: 10px;
+    padding: 5px;
+    font-size: 10px;
+  }
 
   nav > ul {
     flex-direction: column;
@@ -410,6 +447,7 @@ main {
   .goat-container-img img {
     width: 90%;
   }
+
   .gamer-img-container img {
     width: 90%;
     margin-left: 0;
@@ -425,6 +463,17 @@ main {
   .fv-img-content p {
     font-size: 10px;
   }
+  .pi-img img {
+    width: 300px;
+    margin-left: 60px;
+  }
+  .pi-another-img img {
+    width: 120px;
+    margin-left: 60px;
+    bottom: 100px;
+    left: -50px;
+  }
+
   .footer-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -469,5 +518,40 @@ main {
   }
   .fv-img-container {
     flex-direction: column;
+  }
+
+  .games-container .card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .footer-section h5 {
+    font-size: 10px;
+  }
+
+  .footer-icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .footer-icons img {
+    width: 40%;
+  }
+  .footer-terms {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
   }
 }
